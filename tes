@@ -1,4 +1,4 @@
-local times = 20 -- How long you want to stay in the vault, 20 is good for 1k, and makes it impossible for anyone to capture you, 45-50 for 3k.
+local time2 = 49 -- How long you want to stay in the vault, 20 is good for 1k, and makes it impossible for anyone to capture you, 45-50 for 3k.
 
 
 
@@ -22,90 +22,13 @@ while true do
 	if indicator.Transparency ~= 0 and diditrun == false then
         print('its open')
 		diditrun = true
-     local teleport = loadstring(game:HttpGet("https://raw.githubusercontent.com/EclipseYT212/test3/main/tp"))();
-					teleport(CFrame.new(19.7360458, 18.1664009, 840.456848) + Vector3.new(1,0,0)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(19.7360458, 18.1664009, 840.456848) + Vector3.new(1,0,0)
         wait(1.5)
-local Players = game:GetService("Players")
-local PathfindingService = game:GetService("PathfindingService")
-
-local player = Players.LocalPlayer
-local character = player.Character
-local humanoid = character:WaitForChild("Humanoid")
-
-local path = PathfindingService:CreatePath()
-local targetPosition = Vector3.new((29.309, 3.42, 815.25189) -- Replace with your desired target position
-
-local function floatCharacter()
-    local success, errorMessage = pcall(function()
-        path:ComputeAsync(character.PrimaryPart.Position, targetPosition)
-    end)
-    
-    if success then
-        local waypoints = path:GetWaypoints()
-        local nextWaypointIndex = 1
-        
-        while nextWaypointIndex <= #waypoints do
-            local waypoint = waypoints[nextWaypointIndex]
-            local destination = waypoint.Position + Vector3.new(0, 5, 0) -- Adjust the Y value to control the floating height
-            
-            humanoid:MoveTo(destination)
-            
-            repeat
-                wait()
-            until (character.PrimaryPart.Position - destination).Magnitude <= 1
-            
-            nextWaypointIndex = nextWaypointIndex + 1
-        end
-    else
-        warn("Failed to compute path:", errorMessage)
-    end
-end
-
-floatCharacter()
-    
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(29.309, 3.42, 815.25189) + Vector3.new(1,0,0)
         wait(2)
-local Players = game:GetService("Players")
-local PathfindingService = game:GetService("PathfindingService")
-
-local player = Players.LocalPlayer
-local character = player.Character
-local humanoid = character:WaitForChild("Humanoid")
-
-local path = PathfindingService:CreatePath()
-local targetPosition = Vector3.new((18.5183678, 5.36565, 804.49) -- Replace with your desired target position
-
-local function floatCharacter()
-    local success, errorMessage = pcall(function()
-        path:ComputeAsync(character.PrimaryPart.Position, targetPosition)
-    end)
-    
-    if success then
-        local waypoints = path:GetWaypoints()
-        local nextWaypointIndex = 1
-        
-        while nextWaypointIndex <= #waypoints do
-            local waypoint = waypoints[nextWaypointIndex]
-            local destination = waypoint.Position + Vector3.new(0, 5, 0) -- Adjust the Y value to control the floating height
-            
-            humanoid:MoveTo(destination)
-            
-            repeat
-                wait()
-            until (character.PrimaryPart.Position - destination).Magnitude <= 1
-            
-            nextWaypointIndex = nextWaypointIndex + 1
-        end
-    else
-        warn("Failed to compute path:", errorMessage)
-    end
-end
-
-floatCharacter()
-       
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(18.5183678, 5.36565, 804.49) + Vector3.new(1,0,0)
         wait(time2)
-  local teleport = loadstring(game:HttpGet("https://raw.githubusercontent.com/EclipseYT212/test3/main/tp"))();
-					teleport(CFrame.new(-1087.7, 170.5, 2022.03) + Vector3.new(0,5,0)
-
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1087.7, 170.5, 2022.03) + Vector3.new(1,0,0)
         times = times + 1
         print(times)
 		repeat
