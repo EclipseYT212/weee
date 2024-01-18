@@ -1,4 +1,4 @@
-local time2 = 20 -- How long you want to stay in the vault, 20 is good for 1k, and makes it impossible for anyone to capture you, 45-50 for 3k.
+local times = 20 -- How long you want to stay in the vault, 20 is good for 1k, and makes it impossible for anyone to capture you, 45-50 for 3k.
 
 
 
